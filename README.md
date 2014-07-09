@@ -4,4 +4,6 @@ Email templates for intial offer send & weekly outstanding offer reminders.
 
 * Assets are included in root of directory
 * Double curly brace {{}} syntax used for dynamic content
+
+## To-Do
 * Needs loop on `offer-reminder.html` for each `<li>` representing each outstanding offer. 
