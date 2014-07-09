@@ -7,3 +7,5 @@ Email templates for intial offer send & weekly outstanding offer reminders.
 
 ## To-Do
 * Needs loop on `offer-reminder.html` for each `<li>` representing each outstanding offer. 
+* Replace image asset src URLs with production ones
+* Replace placeholder {{variables}} with production ones
