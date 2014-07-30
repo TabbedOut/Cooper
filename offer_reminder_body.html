@@ -227,12 +227,14 @@
 						<td width="20" valign="top"></td>
 						<td width="560" valign="top">
 							<p class="teaser">
-							Look at all this money we found with your name on it! You have <b>{{offer_number}} offers</b> worth <b>${{offers_total}}</b>. <br />Hurry, before they expire!
+							Look at all this money we found with your name on it! You have <b>{{ offers.count }} offers</b> worth <b>${{ offers_total }}</b>. <br />Hurry, before they expire!
 							</p>
 
 							<ul class="teaser-list">
 								<!-- Need function to loop through each outstanding offer and apply this template to it... -->
+								{% for offer in offers %}
 								<li><b>${{offer_amount}}</b> - {{venue_name}} - off of ${{offer_amount}} <i class="small">(Expires {{offer_expiration}})</i></li>
+								{% endfor %}
 								<!--  ... end of template -->
 							</ul>
 

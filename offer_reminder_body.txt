@@ -1,0 +1,8 @@
+Look at all this money we found with your name on it!
+You have {{offer_number}} offers worth
+${{offers_total}}.
+Hurry, before they expire!
+
+${{offer_amount}} - {{venue_name}} - off of ${{offer_amount}} (Expires {{offer_expiration}})
+
+Don't let your money go to waste!
