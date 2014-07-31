@@ -233,7 +233,7 @@
 							<ul class="teaser-list">
 								<!-- Need function to loop through each outstanding offer and apply this template to it... -->
 								{% for offer in offers %}
-								<li><b>${{ offer.redeem_amount }}</b> - {{ offer.venue.0 }} - off of ${{ offer.minimum_tab }} <i class="small">(Expires {{ offer.stop }})</i></li>
+								<li><b>${{ offer.redeem_amount }}</b> - {{ offer.venue.all.0 }} - off of ${{ offer.minimum_tab }} <i class="small">(Expires {{ offer.stop }})</i></li>
 								{% endfor %}
 								<!--  ... end of template -->
 							</ul>
@@ -311,7 +311,15 @@
 				<td align="center" width="600" valign="top">
 					<a href="http://www.tabbedout.com" target="_blank"><img class="image_fix" src="t-icon.png" /></a>
 					<p class="tiny">TabbedOut | 1135 W. 6th St. Suite 130 | Austin, TX | 78703 <br />
-						<a href="{{unsubscribe-link}} ">Unsubscribe</a> | <a href="{{email-preferences}}">Email Preferences</a>
+
+                                {% block unsubscribe_link %}
+                                  <a href="{% block unsubscribe_href %}*|UNSUB:http://www.tabbedout.com|*{% endblock %}" target="_blank">Unsubscribe ·</a>
+                                {% endblock %}
+
+{% comment %}
+						<a href="{{ unsubscribe-link }} ">Unsubscribe</a> | <a href="{{ email-preferences }}">Email Preferences</a>
+{% endcomment %}
+
 					</p>					
 				</td>
 			</tr>

@@ -4,7 +4,7 @@ ${{ offers_total }}.
 Hurry, before they expire!
 
 {% for offer in offers %}
-  ${{ offer.redeem_amount }} - {{ offer.venue.0 }} - off of ${{ offer.minimum_tab }} (Expires {{ offer.stop }})
+  ${{ offer.redeem_amount }} - {{ offer.venue.all.0 }} - off of ${{ offer.minimum_tab }} (Expires {{ offer.stop }})
 {% endfor %}
 
 Don't let your money go to waste!
