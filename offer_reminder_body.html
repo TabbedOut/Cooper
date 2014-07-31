@@ -233,7 +233,7 @@
 							<ul class="teaser-list">
 								<!-- Need function to loop through each outstanding offer and apply this template to it... -->
 								{% for offer in offers %}
-								<li><b>${{offer_amount}}</b> - {{venue_name}} - off of ${{offer_amount}} <i class="small">(Expires {{offer_expiration}})</i></li>
+								<li><b>${{ offer.redeem_amount }}</b> - {{ offer.venue.0 }} - off of ${{ offer.minimum_tab }} <i class="small">(Expires {{ offer.stop }})</i></li>
 								{% endfor %}
 								<!--  ... end of template -->
 							</ul>

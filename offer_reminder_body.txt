@@ -1,8 +1,10 @@
 Look at all this money we found with your name on it!
-You have {{offer_number}} offers worth
-${{offers_total}}.
+You have {{ offers.count }} offers worth
+${{ offers_total }}.
 Hurry, before they expire!
 
-${{offer_amount}} - {{venue_name}} - off of ${{offer_amount}} (Expires {{offer_expiration}})
+{% for offer in offers %}
+  ${{ offer.redeem_amount }} - {{ offer.venue.0 }} - off of ${{ offer.minimum_tab }} (Expires {{ offer.stop }})
+{% endfor %}
 
 Don't let your money go to waste!
